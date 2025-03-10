@@ -1,0 +1,31 @@
+/* *************** VIDEO *************** */
+
+.video_section {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+.video_section video {
+    min-width: 300px;
+}
+
+/* *************** COMPARADOR *************** */
+
+.comparador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.carros {
+    display: flex;
+    justify-content: center;
+}
+
+.botao_comparador {
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1351d8;
+    color: white;
+}
