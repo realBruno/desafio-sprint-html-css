@@ -14,7 +14,16 @@ main {
 }
 
 .imagem_home img {
-    min-width: 300px;
+    
     width: 85%;
     height: auto;
+}
+
+.aqui {
+    color: #1351d8;
+}
+
+figcaption {
+    text-align: justify;
+    padding: 0 30px;
 }
