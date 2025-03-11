@@ -25,9 +25,9 @@ main {
 
 .formulario > input {
     height: 2.5rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     border: 1px solid black;
-    padding: 5px;
+    padding: 0.3125rem;
 }
 
 .formulario > input:focus {
@@ -68,8 +68,8 @@ input[type=number] {
 /* *************** IMAGEM *************** */
 
 .xls_diesel { 
-    width: 80%;
-    max-width: 300px;
+    width: 70%;
+    max-width: 18.75rem;
     height: auto;
     align-self: start;
 }
