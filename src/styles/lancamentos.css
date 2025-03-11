@@ -24,12 +24,6 @@
     align-items: center;
 }
 
-.comparador .tabela {
-    border-collapse: separate;
-    border-spacing: 0.625rem 0.625rem;
-    background-color: red;
-}
-
 .botao_comparador {
     padding: 10px 40px;
     border-radius: 10px;
@@ -40,9 +34,16 @@
 
 .dados {
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 
-.informacoes {
+tr {
+    display: flex;
+    background-color: red;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+th {
     display: flex;
 }
