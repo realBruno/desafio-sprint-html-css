@@ -14,12 +14,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
-.carros {
+.comparador .tabela {
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.comparador .tabela {
+    border-collapse: separate;
+    border-spacing: 0.625rem 0.625rem;
+    background-color: red;
 }
 
 .botao_comparador {
@@ -28,4 +36,13 @@
     border: none;
     background-color: #1351d8;
     color: white;
+}
+
+.dados {
+    display: flex;
+    align-items: center;
+}
+
+.informacoes {
+    display: flex;
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ford</title>
     <link rel="stylesheet" href="../styles/lancamentos.css">
-
+    
     <!-- ESTILOS COMUNS (FOOTER, HEADER) -->
     <link rel="stylesheet" href="../styles/style.css">
 
@@ -36,26 +36,50 @@
             </video>
         </section>
         <section class="comparador">
-            <div class="carros">
+            
+            <table class="tabela">
+                <tr>
+                    <th>
+                        <img src="../../public/images/xl_cabine.jpg" alt="XL Cabine">
+                    </th>
+                    
+                    <th>
+                        <img src="../../public/images/xls_diesel.jpg" alt="XLS Diesel">
+                    </th>
+                    
+                    <th>
+                        <img src="../../public/images/storm.jpg" alt="Storm">
+                    </th>
+                </tr>
 
-                <figure class="cabine">
-                    <img src="../../public/images/xl_cabine.jpg" alt="XL Cabine">
-                    <figcaption>Lorem ipsum dolor sit amet.</figcaption>
-                    <input type="checkbox">
-                </figure>
-    
-                <figure class="diesel">
-                    <img src="../../public/images/xls_diesel.jpg" alt="XLS Diesel">
-                    <figcaption>Lorem ipsum dolor sit amet.</figcaption>
-                    <input type="checkbox">
-                </figure>
-    
-                <figure class="">
-                    <img src="../../public/images/storm.jpg" alt="Storm">
-                    <figcaption>Lorem ipsum dolor sit amet.</figcaption>
-                    <input type="checkbox">
-                </figure>
-            </div>
+                <tr class="informacoes">
+                    <td class="dados">
+                        <input class="checkbox" type="checkbox">
+                        <div class="legendas">
+                            <p>XL Cabine Simples 2.2 Diesel 4x4 C/P 2022</p>
+                            <p>Preço Sob Consulta</p>
+                        </div>
+                        <img src="../../public/images/info.png" alt="info">
+                    </td>
+                    <td class="dados">
+                        <input class="checkbox" type="checkbox">
+                        <div class="legendas">
+                            <p>XLS 2.2 Diesel 4x4 AT 2022</p>
+                            <p>Preço Sob Consulta</p>
+                        </div>
+                        <img src="../../public/images/info.png" alt="info">
+                    </td>
+                    <td class="dados">
+                        <input class="checkbox" type="checkbox">
+                        <div class="legendas">
+                            <p>Storm 3.2 Diesel 4x4 AT 2022</p>
+                            <p>Preço Sob Consulta</p>
+                        </div>
+                        <img src="../../public/images/info.png" alt="info">
+                    </td>
+                </tr>
+            </table>
+
             <button class="botao_comparador">Comparar Carros</button>
         </section>
     </main>

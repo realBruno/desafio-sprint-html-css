@@ -24,10 +24,18 @@ main {
 }
 
 .formulario > input {
-    height: 2.5rem;
+    height: 2.3rem;
     border-radius: 0.625rem;
     border: 1px solid black;
     padding: 0.3125rem;
+}
+
+.formulario > textarea {
+    padding: 0.3125rem;
+    border-radius: 0.625rem;
+    border: 1px solid black;
+    resize: none;
+    font-size: 1rem;
 }
 
 .formulario > input:focus {
@@ -53,7 +61,6 @@ main {
     font-size: 1.25rem;
 }
 
-/* REMOVER FLECHAS DOS CAMPUS QUE RECEBEM NÚMEROS */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
