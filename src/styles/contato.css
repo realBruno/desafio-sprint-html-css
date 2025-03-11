@@ -1,0 +1,76 @@
+main {
+    display: flex;
+}
+
+.form-image {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: start;
+    margin-top: 5%;
+    flex-wrap: wrap-reverse;
+}
+
+/* ************* FORMULÁRIO *************** */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 13.75rem;
+    width: 20%;
+    max-width: 18.75rem;
+}
+
+.formulario > input {
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.formulario > input:focus {
+    outline-width: 0;
+}
+
+.formulario .button {
+    align-self: end;
+    background-color: #1351d8;
+    color: white;
+    padding: 0.625rem 20%;
+    border-radius: 0.625rem;
+    border: none;
+    transition: all 0.5s;
+}
+
+.formulario .button:hover {
+    transform: scale(1.05);
+}
+
+.sobre_voce {
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+/* REMOVER FLECHAS DOS CAMPUS QUE RECEBEM NÚMEROS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* *************** IMAGEM *************** */
+
+.xls_diesel { 
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    align-self: start;
+}
+
