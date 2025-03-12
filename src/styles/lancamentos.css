@@ -1,11 +1,14 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
 /* *************** VIDEO *************** */
 
 .video_section {
     background-color: rgb(0, 0, 0);
     text-align: center;
-}
-.video_section video {
-    min-width: 300px;
 }
 
 /* *************** COMPARADOR *************** */
@@ -14,14 +17,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.625rem;
+    gap: 1.25rem;
 }
 
 .comparador .tabela {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .botao_comparador {
@@ -32,18 +34,28 @@
     color: white;
 }
 
-.dados {
+.legendas {
+    width: 80%;
     display: flex;
-    align-items: start;
+    gap: 0.3125rem;
+    flex-direction: column;
+    width: fit-content;
 }
 
-tr {
+.carro {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.abaixo {
     display: flex;
-    background-color: red;
+    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 0.625rem;
 }
 
-th {
-    display: flex;
+.nome_carro {
+    color: #1351d8;
 }
