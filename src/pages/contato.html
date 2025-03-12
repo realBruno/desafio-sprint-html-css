@@ -35,10 +35,15 @@
 
             <form class="formulario" action="submit">
                 <p class="sobre_voce">Sobre Você</p>
-                <input type="text" placeholder="NOME*" required>
-                <input type="email" placeholder="E-MAIL*" required>
-                <input type="number" placeholder="TELEFONE*" required>
-                <input type="number" placeholder="TIPO DO CONTATO*" required>
+                <input class="input" type="text" placeholder="NOME*" required>
+                <input class="input" type="email" placeholder="E-MAIL*" required>
+                <input class="input" type="number" placeholder="TELEFONE*" required>
+                <select class="input" required>
+                    <option value="" disabled selected>TIPO DO CONTATO*</option>
+                    <option value="elogio">ELOGIO</option>
+                    <option value="reclamacao">RECLAMAÇÃO</option>
+                    <option value="solicitacao">SOLICITAÇÃO</option>
+                </select>
                 <textarea cols="30" rows="4" placeholder="MENSAGEM" required></textarea>
                 <button class="button">Enviar</button>
             </form>

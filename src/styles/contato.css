@@ -23,7 +23,7 @@ main {
     max-width: 18.75rem;
 }
 
-.formulario>input {
+.formulario>.input {
     height: 2.3rem;
     border-radius: 0.625rem;
     border: 1px solid black;
@@ -37,7 +37,7 @@ main {
     resize: none;
 }
 
-.formulario>input:focus {
+.formulario>.input:focus {
     outline-width: 0;
 }
 
