@@ -87,10 +87,10 @@ main {
 
 /* *************** EFFECT ON EVERY ANCHOR ELEMENT *************** */
 
-a {
+.link {
     transition: all 0.5s;
 }
 
-a:hover {
-    transform: scale(1.5);
+.link:hover {
+    transform: scale(1.05);
 }

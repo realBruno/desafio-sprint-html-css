@@ -9,6 +9,13 @@ main {
 .video_section {
     background-color: rgb(0, 0, 0);
     text-align: center;
+    min-height: 100px;
+}
+
+.video_section video{
+    min-width: 80%;
+    height: 100%;
+    max-height: 500px;
 }
 
 /* *************** COMPARADOR *************** */
@@ -27,11 +34,19 @@ main {
 }
 
 .botao_comparador {
-    padding: 10px 40px;
-    border-radius: 10px;
+    padding: 0.625rem 2.5rem;
+    border-radius: 0.625rem;
     border: none;
     background-color: #1351d8;
     color: white;
+    margin-bottom: 0.625rem;
+    transition: border 0s;
+    transition: transform 0.5s;
+}
+
+.botao_comparador:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
 }
 
 .legendas {
@@ -44,7 +59,7 @@ main {
 
 .carro {
     width: 100%;
-    max-width: 300px;
+    max-width: 18.75rem;
     height: auto;
 }
 
@@ -58,4 +73,14 @@ main {
 
 .nome_carro {
     color: #1351d8;
+}
+
+tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input {
+    transform: scale(1.5);
 }

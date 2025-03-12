@@ -23,21 +23,21 @@ main {
     max-width: 18.75rem;
 }
 
-.formulario > input {
+.formulario>input {
     height: 2.3rem;
     border-radius: 0.625rem;
     border: 1px solid black;
     padding: 0.3125rem;
 }
 
-.formulario > textarea {
+.formulario>textarea {
     padding: 0.3125rem;
     border-radius: 0.625rem;
     border: 1px solid black;
     resize: none;
 }
 
-.formulario > input:focus {
+.formulario>input:focus {
     outline-width: 0;
 }
 
@@ -48,11 +48,13 @@ main {
     padding: 0.625rem 20%;
     border-radius: 0.625rem;
     border: none;
-    transition: all 0.5s;
+    transition: border 0s;
+    transition: transform 0.5s;
 }
 
 .formulario .button:hover {
     transform: scale(1.05);
+    border: 1px solid black;
 }
 
 .sobre_voce {
@@ -62,21 +64,20 @@ main {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 /* *************** IMAGEM *************** */
 
-.xls_diesel { 
+.xls_diesel {
     width: 70%;
     max-width: 18.75rem;
     height: auto;
     align-self: start;
 }
-
