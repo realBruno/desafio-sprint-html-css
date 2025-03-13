@@ -84,3 +84,7 @@ tr {
 input {
     transform: scale(1.5);
 }
+
+.info:hover {
+    cursor:pointer
+}
