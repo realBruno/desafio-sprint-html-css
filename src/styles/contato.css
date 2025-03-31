@@ -35,6 +35,7 @@ main {
     border-radius: 0.625rem;
     border: 1px solid black;
     resize: none;
+    font-size: 1rem;
 }
 
 .formulario>.input:focus {
