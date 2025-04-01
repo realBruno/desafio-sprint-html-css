@@ -1,24 +1,11 @@
-.imagem_home {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    align-items: center;
-    gap: 0.625rem;
-}
-
 main {
     display: flex;
     align-items: center;
     justify-items: center;
+    flex-direction: column;
 }
 
-.imagem_home .home-item-link {
-    width: 100%;
-    display: flex;
-}
-
-.imagem_home img {
+.slider img {
     width: 85%;
     height: auto;
     margin: 0 auto;
@@ -28,6 +15,27 @@ main {
     color: #1351d8;
 }
 
-figcaption {
-    padding: 0 30px;
+li {
+    list-style-type: none;
+}
+
+.link-item, .list-item {
+    width: 100%;
+    text-align: center;
+}
+
+.slider {
+    width: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex;
+    gap: 0.625rem;
+}
+
+.carousel {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

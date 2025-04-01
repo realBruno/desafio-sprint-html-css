@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav class="header">
@@ -28,12 +30,27 @@
     </header>
 
     <main>
-        <figure class="imagem_home">
-            <a class="home-item-link" href="">
-                <img href="" class="home-item" src="./public/images/home-item-1.jpg" alt="Ranger Ford 2022">
-            </a>
-            <figcaption class="figcaption">Esta é a nova Ranger Ford 2022. Verifique novidades <a class="aqui" href="#">aqui</a>.</figcaption>
-        </figure>
+
+        <ul class="slider">
+           <div class="carousel">
+            <li class="list-item" class="slide">
+                <a class="link-item" href="#"><img src="./public/images/home-item-1.jpg" alt="Ranger Ford 2022"></a>
+                <!-- FICAPTION: Esta é a nova Ranger Ford 2022. Verifique novidades <a class="aqui"
+            href="#">aqui</a>. -->
+            </li>
+
+            <!-- <li class="list-item" class="slide">
+                <a class="link-item" href="#"><img src="./public/images/home-item-2.jpg" alt="Ranger Ford 2022"></a>
+            </li>
+
+            <li class="list-item" class="slide">
+                <a class="link-item" href="#"><img src="./public/images/home-item-3.jpg" alt="Ranger Ford 2022"></a>
+            </li> -->
+
+            <li class="list-item">LOREM IPSUM</li>
+           </div>
+        </ul>
+
     </main>
 
     <footer>
@@ -41,9 +58,12 @@
             <section class="redes_sociais">
                 <p>Redes Sociais</p>
                 <ul class="links_footer">
-                    <li class="link"><a href="https://www.facebook.com/FordBrasil"><img src="./public/images/facebook.png" alt="facebook logo"></a></li>
-                    <li class="link"><a href="https://www.youtube.com/fordbrasil"><img src="./public/images/youtube.png" alt="youtube logo"></a></li>
-                    <li class="link"><a href="https://www.instagram.com/fordbrasil"><img src="./public/images/instagram.png" alt="instagram logo"></a></li>
+                    <li class="link"><a href="https://www.facebook.com/FordBrasil"><img
+                                src="./public/images/facebook.png" alt="facebook logo"></a></li>
+                    <li class="link"><a href="https://www.youtube.com/fordbrasil"><img src="./public/images/youtube.png"
+                                alt="youtube logo"></a></li>
+                    <li class="link"><a href="https://www.instagram.com/fordbrasil"><img
+                                src="./public/images/instagram.png" alt="instagram logo"></a></li>
                 </ul>
             </section>
             <img class="logo_footer" src="./public/images/logo_footer.png" alt="Logo">
@@ -52,4 +72,5 @@
 
     <script src="./src/js/carousel.js"></script>
 </body>
+
 </html>
