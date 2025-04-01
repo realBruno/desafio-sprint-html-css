@@ -13,10 +13,15 @@ main {
     justify-items: center;
 }
 
+.imagem_home .home-item-link {
+    width: 100%;
+    display: flex;
+}
+
 .imagem_home img {
-    
     width: 85%;
     height: auto;
+    margin: 0 auto;
 }
 
 .aqui {
