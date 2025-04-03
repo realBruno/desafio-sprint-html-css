@@ -53,11 +53,6 @@ main {
     transition: transform 0.5s;
 }
 
-.formulario .button:hover {
-    transform: scale(1.05);
-    border: 1px solid black;
-}
-
 .sobre_voce {
     font-weight: 500;
     font-size: 1.25rem;

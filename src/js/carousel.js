@@ -1,37 +1,54 @@
 'use strict';
 
+const image = document.querySelector(".list-item .link-item .image");
+const figcaption = document.querySelector(".figcaption-class");
+const link_item = document.querySelector(".link-item");
+
+let id = 0;
+
 class Carousel {
-    constructor(image, title, url) {
-        this.image = image;
-        this.title = title;
-        this.url = url;
+    constructor(objectArr) {
+        this.objectArr = objectArr;
     }
 
-    showImage() {
-        const image = document.querySelector(".home-item");
-        image.src = this.image;
+    Start() {
+        setInterval(() => {
+            this.Next()
+        }, 2000);
+    }
 
-        const title = document.querySelector(".figcaption");
-        title.innerHTML = this.title;
+    Next() {
+        this.Update(id); // mostrar: 0 // mostrar: 1 // mostrar 2 // mostrar: 3
+        if (id >= objectArr.length - 1) id = 0; // mudar: 1 // mudar: 2 // mudar: 3
+        else id++;
+    }
 
-        const url = document.querySelector(".home-item-link");
-        url.setAttribute("href", this.url);
+    Update(id) {
+        image.src = objectArr[id].src;
+        figcaption.innerHTML = objectArr[id].title;
     }
 }
 
-const home_item_1 = new Carousel("../../public/images/home-item-1.jpg",
-    `Esta é a nova Ranger Ford 2022. Verifique novidades <a class="aqui" href="#">aqui</a>`,
-    "../../src/pages/lancamentos.html");
-home_item_1.showImage()
+const objectArr = [
+    {
+        src: `./public/images/home-item-1.jpg`,
+        title: `Esta é a nova Ranger Ford 2022. Verifique novidades <a class="aqui" href="#">aqui</a>`,
+        url: "./src/pages/lancamentos.html"
+    },
 
-const home_item_2 = new Carousel("../../public/images/home-item-2.jpg",
-    `Esta é a nova Ranger Ford 2022. Verifique novidades <a class="aqui" href="#">aqui</a>`,
-    "../../src/pages/lancamentos.html");
+    {
+        src: `./public/images/home-item-2.jpg`,
+        title: "Pessoas acompanham montagem do primeiro carro da Ford no Brasil (São Paulo, 1921)",
+        url: "./src/pages/lancamentos.html"
+    },
 
-home_item_2.showImage();
+    {
+        src: `./public/images/home-item-3.jpg`,
+        title: "Novo Ford Bronco Sport 2022",
+        url: "./src/pages/lancamentos.html"
+    }
+]
 
-const home_item_3 = new Carousel("../../public/images/home-item-3.jpg",
-    `Nova Ford Bronco Sport 2022`,
-    "../../src/pages/lancamentos.html");
+const objetos = new Carousel(objectArr);
 
-home_item_3.showImage();
+objetos.Start();
