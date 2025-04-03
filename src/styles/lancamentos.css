@@ -1,6 +1,7 @@
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1.25rem;
 }
 
@@ -27,7 +28,7 @@ main {
     gap: 1.25rem;
 }
 
-.comparador .tabela {
+.comparador .tabela-principal {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -75,7 +76,7 @@ main {
     color: #1351d8;
 }
 
-tr {
+.tabela-principal tr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -87,4 +88,70 @@ input {
 
 .info:hover {
     cursor:pointer
+}
+
+/*  */
+
+dialog {
+    visibility: hidden;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 0.625rem ;
+    box-shadow: 0px 0px 7px black;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.tabela-dialog {
+    text-wrap: wrap;
+    display: flex;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 300px;
+}   
+
+.car {
+    width: 85%;
+    height: auto;
+}
+
+.tabela-dialog tr {
+    height: 1.25rem;
+}
+
+.tabela-dialog tr td {
+    padding: 0px 5px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.impar {
+    background-color: rgb(255, 255, 255);
+}
+
+.par {
+    background-color: #ebebeb;
+    color: black;
+}
+
+.fechar {
+    padding: 0.625rem 2.5rem;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: #1351d8;
+    color: white;
+    width: 15%;
+    align-self: center;
+    transition: border 0s;
+    transition: transform 0.5s;
+}
+
+.fechar:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
 }

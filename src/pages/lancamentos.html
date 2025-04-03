@@ -38,12 +38,12 @@
         </section>
         <section class="comparador">
 
-            <table class="tabela">
+            <table class="tabela-principal">
                 <tr>
                     <td>
                         <img class="carro" src="../../public/images/xl_cabine.jpg" alt="XL Cabine">
                         <div class="abaixo">
-                            <input class="xl checkbox" type="checkbox">
+                            <input id="xl" class="xl checkbox" type="checkbox">
                             <div class="legendas">
                                 <p class="nome_carro">XL Cabine Diesel 4x4 2022</p>
                                 <p>R$ 153.376,00</p>
@@ -54,7 +54,7 @@
                     <td>
                         <img class="carro" src="../../public/images/xls_diesel.jpg" alt="XLS Diesel">
                         <div class="abaixo">
-                            <input class="xls checkbox" type="checkbox">
+                            <input id="xls" class="xls checkbox" type="checkbox">
                             <div class="legendas">
                                 <p class="nome_carro">XLS 2.2 Diesel 4x4 2022</p>
                                 <p>R$ 155.890,00</p>
@@ -65,7 +65,7 @@
                     <td>
                         <img class="carro" src="../../public/images/storm.jpg" alt="Storm">
                         <div class="abaixo">
-                            <input class="storm checkbox" type="checkbox">
+                            <input id="storm" class="storm checkbox" type="checkbox">
                             <div class="legendas">
                                 <p class="nome_carro">Storm 3.2 Diesel 4x4 2022</p>
                                 <p>R$ 169.740,00</p>
@@ -75,9 +75,79 @@
                     </td>
                 </tr>
             </table>
-
             <button class="botao_comparador">Comparar Carros</button>
         </section>
+
+        <dialog>
+            <table class="tabela-dialog">
+                <tr>
+                    <th></th>
+                    <th class="image-container"><img class="car car1" src="../../public/images/xl_cabine.jpg" alt=""></th>
+                    <th class="image-container"><img class="car car2" src="../../public/images/xls_diesel.jpg" alt=""></th>
+                </tr>
+    
+                <tr class="par modelo">
+                    <td>Modelo</td>
+                    <td>XL Cabine Diesel 4x4 2022</td>
+                    <td>XLS 2.2 Diesel 4X4 AT 2022</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Altura da caçamba (mm)</td>
+                    <td>511</td>
+                    <td>511</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Altura do veículo (mm)</td>
+                    <td>1821</td>
+                    <td>1821</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Altura livre do solo (mm)</td>
+                    <td>232</td>
+                    <td>232</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Capacidade de carga (kg)</td>
+                    <td>1234</td>
+                    <td>1076</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Motor</td>
+                    <td>2.2</td>
+                    <td>2.2</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Potência (CV)</td>
+                    <td>160</td>
+                    <td>160</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Volume da caçamba (L)</td>
+                    <td>1420</td>
+                    <td>1180</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Roda</td>
+                    <td>Aço Estampado 16</td>
+                    <td>Aço Estampado 16</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Preço</td>
+                    <td>R$ 153.376,00</td>
+                    <td>R$ 155.890,00</td>
+                </tr>
+            </table>
+            <button class="fechar">Fechar</button>
+        </dialog>
 
     </main>
 
