@@ -24,6 +24,10 @@ li {
     text-align: center;
 }
 
+.figcaption-class {
+    padding: 0 30px;
+}
+
 .slider {
     width: 100%;
     flex-grow: 1;

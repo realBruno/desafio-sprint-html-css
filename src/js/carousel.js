@@ -18,8 +18,8 @@ class Carousel {
     }
 
     Next() {
-        this.Update(id); // mostrar: 0 // mostrar: 1 // mostrar 2 // mostrar: 3
-        if (id >= objectArr.length - 1) id = 0; // mudar: 1 // mudar: 2 // mudar: 3
+        this.Update(id);
+        if (id >= objectArr.length - 1) id = 0;
         else id++;
     }
 
@@ -38,7 +38,7 @@ const objectArr = [
 
     {
         src: `./public/images/home-item-2.jpg`,
-        title: "Pessoas acompanham montagem do primeiro carro da Ford no Brasil (São Paulo, 1921)",
+        title: "Montagem do primeiro carro da Ford no Brasil (São Paulo, 1921)",
         url: "./src/pages/lancamentos.html"
     },
 
@@ -49,6 +49,6 @@ const objectArr = [
     }
 ]
 
-const objetos = new Carousel(objectArr);
+const carousel = new Carousel(objectArr);
 
-objetos.Start();
+carousel.Start();
