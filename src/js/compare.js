@@ -11,7 +11,10 @@ let max = 2;
 
 function doTheChecking(e) {
     if (!max && e.checked) {
-        alert("error")
+        Swal.fire({
+            icon: "error",
+            title: "Selecione dois veículos",
+        });
         e.checked = false;
     }
     else e.checked ? max-- : max++;
@@ -28,11 +31,12 @@ const dialog = document.querySelector("dialog");
 button.addEventListener("click", () => {
     if (!max) {
         if (xl.checked && xls.checked) {
-            dialog.style.visibility = "visible";
+            changeBackground();
+            dialog.showModal();
             dialog.innerHTML = `
             <table class="tabela-dialog">
                 <tr>
-                    <th style="visibility: hidden;" class="image-container"><img class="car car1" src="../../public/images/xls_diesel.jpg" alt=""></th>
+                    <th></th>
                     <th class="image-container"><img class="car car1" src="../../public/images/xl_cabine.jpg" alt=""></th>
                     <th class="image-container"><img class="car car2" src="../../public/images/xls_diesel.jpg" alt=""></th>
                 </tr>
@@ -97,14 +101,15 @@ button.addEventListener("click", () => {
                     <td>R$ 155.890,00</td>
                 </tr>
             </table>
-            <button class="fechar">Fechar</button>`
+            <div class="container-fechar"><button class="fechar" onclick="hide()">Fechar</button></div>`
         }
         else if (xl.checked && storm.checked) {
-            dialog.style.visibility = "visible";
+            changeBackground();
+            dialog.showModal();
             dialog.innerHTML = `
             <table class="tabela-dialog">
                 <tr>
-                    <th style="visibility: hidden;" class="image-container"><img class="car car1" src="../../public/images/xls_diesel.jpg" alt=""></th>
+                    <th></th>
                     <th class="image-container"><img class="car car1" src="../../public/images/xl_cabine.jpg" alt=""></th>
                     <th class="image-container"><img class="car car2" src="../../public/images/storm.jpg" alt=""></th>
                 </tr>
@@ -169,14 +174,15 @@ button.addEventListener("click", () => {
                     <td>R$ 169.740,00</td>
                 </tr>
             </table>
-            <button class="fechar">Fechar</button>`
+            <div class="container-fechar"><button class="fechar" onclick="hide()">Fechar</button></div>`
         }
         else if (xls.checked && storm.checked) {
-            dialog.style.visibility = "visible";
+            changeBackground();
+            dialog.showModal();
             dialog.innerHTML = `
             <table class="tabela-dialog">
                 <tr>
-                    <th style="visibility: hidden;" class="image-container"><img class="car car1" src="../../public/images/xls_diesel.jpg" alt=""></th>
+                    <th></th>
                     <th class="image-container"><img class="car car1" src="../../public/images/xls_diesel.jpg" alt=""></th>
                     <th class="image-container"><img class="car car2" src="../../public/images/storm.jpg" alt=""></th>
                 </tr>
@@ -241,18 +247,157 @@ button.addEventListener("click", () => {
                     <td>R$ 169.740,00</td>
                 </tr>
             </table>
-            <button class="fechar">Fechar</button>`
+            <div class="container-fechar"><button class="fechar" onclick="hide()">Fechar</button></div>`
         }
     }
     else {
-        alert("msg de erro")
+        Swal.fire({
+            icon: "error",
+            title: "Selecione dois veículos",
+        });
     }
 });
 
-/* QUANDO ENTRAR NA TELA DO COMPARADOR, PAUSAR O VIDEO E DESFOCAR BACKGROUND
-*/
+function hide() {
+    dialog.close();
+    document.getElementById("video").play();
+    document.body.style.overflow = "initial";
+}
 
-document.querySelector(".fechar").addEventListener("click", () => {
-    console.log("entrou")
-    document.querySelector(".fechar").style.visibility = "hidden";
+function changeBackground() {
+    document.getElementById("video").pause();
+    document.body.style.overflow = "hidden";
+}
+
+const info = document.querySelectorAll(".info");
+info.forEach((e) => {
+    e.addEventListener("click", () => {
+        if (e.className.includes("info1")) {
+            dialog.showModal();
+            dialog.innerHTML = `           
+                <table class="tabela-dialog">
+                <tr>
+                    <th></th>
+                    <th class="image-container"><img class="car car1" src="../../public/images/xl_cabine.jpg" alt=""></th>
+                </tr>
+    
+                <tr class="par modelo">
+                    <td>Modelo</td>
+                    <td>XL Cabine Diesel 4x4 2022</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Altura da caçamba (mm)</td>
+                    <td>511</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Altura do veículo (mm)</td>
+                    <td>1821</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Altura livre do solo (mm)</td>
+                    <td>232</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Capacidade de carga (kg)</td>
+                    <td>1234</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Motor</td>
+                    <td>2.2</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Potência (CV)</td>
+                    <td>160</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Volume da caçamba (L)</td>
+                    <td>1420</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Roda</td>
+                    <td>Aço Estampado 16</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Preço</td>
+                    <td>R$ 153.376,00</td>
+                </tr>
+            </table>
+            <div class="container-fechar"><button class="fechar" onclick="hide()">Fechar</button></div>`
+        }
+
+        else if(e.className.includes("info2")) {
+            dialog.showModal();
+            dialog.innerHTML = `<table class="tabela-dialog">
+                <tr>
+                    <th></th>
+                    <th class="image-container"><img class="car car1" src="../../public/images/xl_cabine.jpg" alt=""></th>
+                </tr>
+    
+                <tr class="par modelo">
+                    <td>Modelo</td>
+                    <td>XL Cabine Diesel 4x4 2022</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Altura da caçamba (mm)</td>
+                    <td>511</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Altura do veículo (mm)</td>
+                    <td>1821</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Altura livre do solo (mm)</td>
+                    <td>232</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Capacidade de carga (kg)</td>
+                    <td>1234</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Motor</td>
+                    <td>2.2</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Potência (CV)</td>
+                    <td>160</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Volume da caçamba (L)</td>
+                    <td>1420</td>
+                </tr>
+
+                <tr class="par">
+                    <td>Roda</td>
+                    <td>Aço Estampado 16</td>
+                </tr>
+
+                <tr class="impar">
+                    <td>Preço</td>
+                    <td>R$ 153.376,00</td>
+                </tr>
+            </table>
+            <div class="container-fechar"><button class="fechar" onclick="hide()">Fechar</button></div>`
+        }
+
+        else {
+
+        }
+
+    });
 });

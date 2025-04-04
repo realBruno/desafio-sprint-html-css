@@ -32,7 +32,7 @@
 
     <main>
         <section class="video_section">
-            <video controls loop autoplay width="40%" height="auto">
+            <video id="video" controls loop autoplay width="40%" height="auto">
                 <source src="../../public/videos/ford_enter.mp4">
             </video>
         </section>
@@ -48,7 +48,7 @@
                                 <p class="nome_carro">XL Cabine Diesel 4x4 2022</p>
                                 <p>R$ 153.376,00</p>
                             </div>
-                            <img class="info" src="../../public/images/info.png" alt="info">
+                            <img class="info info1" src="../../public/images/info.png" alt="info">
                         </div>
                     </td>
                     <td>
@@ -59,7 +59,7 @@
                                 <p class="nome_carro">XLS 2.2 Diesel 4x4 2022</p>
                                 <p>R$ 155.890,00</p>
                             </div>
-                            <img class="info" src="../../public/images/info.png" alt="info">
+                            <img class="info info2" src="../../public/images/info.png" alt="info">
                         </div>
                     </td>
                     <td>
@@ -70,7 +70,7 @@
                                 <p class="nome_carro">Storm 3.2 Diesel 4x4 2022</p>
                                 <p>R$ 169.740,00</p>
                             </div>
-                            <img class="info" src="../../public/images/info.png" alt="info">
+                            <img class="info info3" src="../../public/images/info.png" alt="info">
                         </div>
                     </td>
                 </tr>
@@ -78,8 +78,8 @@
             <button class="botao_comparador">Comparar Carros</button>
         </section>
 
-        <dialog>
-            <button class="fechar">Fechar</button>
+        <dialog class="dialog">
+            
         </dialog>
 
     </main>
@@ -98,7 +98,7 @@
         </div>
     </footer>
 
-    <script src="../js/compare.js"></script>
+    <script src="../js/compare.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
