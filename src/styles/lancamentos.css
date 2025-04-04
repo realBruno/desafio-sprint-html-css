@@ -90,7 +90,7 @@ input {
     cursor:pointer
 }
 
-/*  */
+/* DIALOG */
 
 dialog {
     margin: 0 auto;
@@ -108,7 +108,7 @@ dialog {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
-    min-width: 300px;
+    font-weight: 500;
 }   
 
 .car {
@@ -121,7 +121,7 @@ dialog {
 }
 
 .tabela-dialog tr td {
-    padding: 0px 5px;
+    padding: 0px 10px;
 }
 
 .image-container {
@@ -133,8 +133,9 @@ dialog {
 }
 
 .par {
-    background-color: #ebebeb;
+    background-color: #616e91;
     color: black;
+    color: white;
 }
 
 .fechar {
@@ -153,5 +154,8 @@ dialog {
 }
 
 .container-fechar {
+    text-align: center;
+}
+.align-center {
     text-align: center;
 }
