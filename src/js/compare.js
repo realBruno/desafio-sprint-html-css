@@ -262,11 +262,17 @@ function hide() {
     dialog.close();
     document.getElementById("video").play();
     document.body.style.overflow = "initial";
+    document.getElementById("blur").classList.remove("blur");
 }
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === 'Escape') hide ();
+})
 
 function changeBackground() {
     document.getElementById("video").pause();
     document.body.style.overflow = "hidden";
+    document.getElementById("blur").classList.add("blur");
 }
 
 const info = document.querySelectorAll(".info");
@@ -460,3 +466,4 @@ info.forEach((e) => {
 
     });
 });
+
