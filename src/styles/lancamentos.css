@@ -86,11 +86,16 @@ input {
     transform: scale(1.5);
 }
 
-.info:hover {
-    cursor: pointer
+.info {
+    transition: transform 0.5s;
 }
 
-/* DIALOG */
+.info:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* *************** DIALOG *************** */
 
 dialog {
     margin: 0 auto;
@@ -157,10 +162,6 @@ dialog {
 }
 
 .container-fechar {
-    text-align: center;
-}
-
-.align-center {
     text-align: center;
 }
 
