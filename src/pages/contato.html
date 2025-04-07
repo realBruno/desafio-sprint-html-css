@@ -41,12 +41,26 @@
                 <input id="number" class="input" type="number" placeholder="TELEFONE*" required>
                 <select class="input" required>
                     <option value="" disabled selected>TIPO DO CONTATO*</option>
-                    <option value="elogio">ELOGIO</option>
-                    <option value="reclamacao">RECLAMAÇÃO</option>
-                    <option value="solicitacao">SOLICITAÇÃO</option>
+                    <option class="elogio" value="elogio">ELOGIO</option>
+                    <option class="reclamacao" value="reclamacao">RECLAMAÇÃO</option>
+                    <option class="solicitacao" value="solicitacao">SOLICITAÇÃO</option>
                 </select>
                 <textarea class="textarea" cols="30" rows="4" placeholder="MENSAGEM" required></textarea>
-                <button class="button" onclick="minimumOfTwo()">Enviar</button>
+                <p class="aviso-privacidade">Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A
+                    qualquer momento, será possível editar ou remover tais dados. <a class="termos" href="https://www.ford.com.br/politica-de-privacidade/">Termos e condições</a>.</p>
+                
+                <div class="checkboxes">
+                    <div class="concordar-termos">
+                        <input type="checkbox" name="termos-condicoes" id="checkbox-termos">
+                        <label class="label-checkbox" for="termos-condicoes">Sim. Li e concordo com os Termos e Condições.</label>
+                    </div>
+                    <div class="concordar-novidades">
+                        <input type="checkbox" name="novidades" id="chebkox-novidades">
+                        <label class="label-checkbox" for="novidades">Sim. Também quero receber descontos e novidades. </label>
+                    </div>
+                </div>
+                
+                <button class="button" onclick="makeButtonUsable()">Enviar</button>
             </form>
         </section>
     </main>

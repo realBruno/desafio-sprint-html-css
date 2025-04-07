@@ -1,23 +1,14 @@
 'use strict';
 
-const button = document.querySelector(".button");
-
-button.addEventListener("mouseover", (e) => {
-    button.style.transform = "scale(1.05)";
-    button.style.border = "1px solid black;";
-});
-
-button.addEventListener("mouseout", (e) => {
-    button.style.transform = "scale(1.00)";
-    button.style.border = "none;";
-});
-
 function show_alert() {
     const text = document.getElementById("text").value;
     const email = document.getElementById("email").value;
     const number = document.getElementById("number").value;
+    
+    const select = document.querySelector("select").value;
 
-    if (text != '' && email != '' && number != '') {
+    if (text != '' && email != '' && number != '' && email.includes("@") && email.includes(".") &&
+        select == 'elogio' || select == 'reclamacao' || select == 'solicitacao') {
         Swal.fire({
             position: "center",
             icon: "success",
@@ -34,4 +25,41 @@ function show_alert() {
             text: "Preencha todas as informações",
           });
     }
+}
+
+const termosCondicoes = document.getElementById("checkbox-termos");
+const button = document.querySelector(".button");
+button.disabled = true;
+
+termosCondicoes.addEventListener("change", () => {
+    if (termosCondicoes.checked) {
+        button.style.background = "blue";
+        button.style.cursor = "pointer";
+        button.disabled = false;
+
+        button.addEventListener("mouseover", () => {
+            button.style.transform = "scale(1.05)";
+        });
+
+        button.addEventListener("mouseout", () => {
+            button.style.transform = "scale(1.00)";
+        });
+    }
+    else {
+        button.style.background = "grey";
+        button.style.cursor = "default";
+        button.disabled = true;
+        button.addEventListener("mouseover", () => {
+            button.style.transform = "scale(1.00)";
+        });
+
+        button.addEventListener("mouseout", () => {
+            button.style.transform = "scale(1.00)";
+        });
+    }
+});
+
+function makeButtonUsable () {
+    if (termosCondicoes.checked)
+        show_alert();
 }
